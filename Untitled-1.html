@@ -6,6 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 html, body {
     margin: 0;
@@ -29,7 +30,15 @@ body::-webkit-scrollbar {
 </style>
 </head>
 <style>
-
+.fa{
+    font-size: 24px;
+}
+.contacts{
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 80px;
+    padding-left: 32px;
+}
 .text { 
     font-size: 24px;
     font-family: 'Montserrat', sans-serif;
@@ -55,6 +64,7 @@ body::-webkit-scrollbar {
     background-image: url('./model/white.png');
     display: flex;
     flex-direction: column;
+    border-radius: 12px;
 }
 .name {
     display: flex;
@@ -64,12 +74,6 @@ body::-webkit-scrollbar {
     justify-content: center;
 }
 .name1 {
-}
-.con {
-    display: flex;
-    top: -10px;
-    right: 0;
-    padding-right: 32px;
 }
 .check {
     display: flex;
@@ -97,44 +101,19 @@ padding-bottom: 120px;
 .linking{
     top: 42%;
 }
-.podPicture{
-    scale: 1.2;
-}
 @media (max-width:2000px) {
-    .podPicture{
-        scale: 1.1;
-    }
     .pod{
         padding-bottom: 60px;
     }
-    .con{
-        scale: 0.9;
-    }
 }
 @media (max-width:1920px) {
-    .podPicture{
-        scale: 1;
-    }
     .pod{
         padding-bottom: 20px;
-    }
-    .con{
-        
-        top: -20px;
-        right: -15px;
-        scale: 0.8;
-        padding-right: 24px;
     }
 }
 @media (max-width:1620px) {
     .ps{
         font-size: 48px;
-    }
-    .con{
-        top: -30px;
-        right: -25px;
-        scale: 0.7;
-        padding-right: 12px;
     }
 }
 @media (max-width:1440px) {
@@ -146,32 +125,70 @@ padding-bottom: 120px;
     }
 }
 @media (max-width:1280px) {
-    .con{
-        top: -40px;
-        right: -35px;
-        scale: 0.6;
-        padding-right: 6px;
-    }
 }
 @media (max-width:900px) {
-    .con{
-        top: -50px;
-        right: -55px;
-        scale: 0.4;
+    .contacts{
+        padding-bottom: 40px;
+        padding-left: 16px;
     }
+}
+@media (min-width:900px){
+    .fa{
+    font-size: 36px;
+}
+}
+@media (max-width:768px) {
+    .text{
+        font-size: 12px;
+    }
+    .ps{
+        font-size: 18px;
+    }
+    .contacts{
+        padding-bottom: 30px;
+        padding-left: 16px;
+    }
+}
+@media (max-width:600px){
+    .naf{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 16px;
+        justify-items: center;
+        text-align: center;
+    }
+}
+@media (max-width:400px){
+    .text{
+        font-size: 10px;
+    }
+    .ps{
+        font-size: 16px
+}}
+
+.whatsapp{
+    align-items: center;
 }
 </style>
 
-<body class="px-32 hidden-scroll 2xl:px-16 xl:px-8 lg:px-6 md:px-4">
+<body class="hidden-scroll 2xl:px-16 xl:px-8 lg:px-6 md:px-4 px-1">
     <div class="box">
-        <div class="my-8 px-8">
+        <div class="md:my-8 my-4 md:px-16 sm:px-8 px-4">
             <div class="naf">  
                 <p class="text">/Жидвока Елена/</p>
                 <p class="ps">ТРАНСПЕРСОНАЛЬНЫЙ ПСИХОЛОГ</p>
                 <p class="text">2026</p>
             </div>
         </div>
-        <div #main class="OurMain py-8 mx-32">
+        <div #main class="OurMain py-8 mx-4 2xl:mx-16 xl:mx-8 lg:mx-6 sm:mx-4 rounded">
+            <div #contacts class="flex contacts">
+                <h2 class="text">Контакты для связи</h2>
+                <a class="whatsapp flex gap-4" href="https://wa.me/79002340113">
+                    <i class="fa fa-whatsapp items-center" ></i>
+                    <h3 class="text md:text-4.5 text-3">Свяжитесь с нами в WhatsApp</h3>
+                </a>
+            </div>
             <div class="hero flex justify-center gap-16 mx-8">
                 <div class="name">
                     <img src="model/name.png ">
@@ -180,17 +197,11 @@ padding-bottom: 120px;
                     <div class="name1">
                         <img src="model/gor.png ">
                     </div>
-                    <a class="con absolute">
-                        <img src = "model/conta.png" onclick="alert('+7 900 234 01 13')">
-                    </a>
                 </div>
             </div>
             <div class="bi py-8 mx-4">
                     <img src="model/bio.png ">
                 </div>
-                <!-- <div class = "check">
-                    <img src="model/check.png" onclick="alert('+7 900 234 01 13')">
-                </div> -->
                 <div class="bio1 mx-4">
                     <img src="model/infa.png">
                 </div>
@@ -201,7 +212,7 @@ padding-bottom: 120px;
 
 
         <div class="pod mx-4">
-            <img class="podPicture" src="model/pod2.jpg">
+            <img class="podPicture" src="model/podhod.png">
         </div>
     </div>
 </body>
